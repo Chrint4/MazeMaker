@@ -47,8 +47,7 @@ int main(int argc, char* argv[]) {
   int x = rand() % Height;
   int y = rand() % Width;
 
-  bool complete = false;
-  while(!complete){
+  while(true){
     point pos(x,y);
     if(std::find(visitedStack.begin(), visitedStack.end(), pos) == visitedStack.end()) visitedStack.push_back(pos);
     maze[toA(x)][toA(y)] = ' ';
